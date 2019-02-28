@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>几种css手机端适配布局 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="一、meta标签的效果 移动端页面一般会在head头部添加如下meta标签。  1&amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width, initial-scale=1.0&amp;quot;&amp;gt;  该meta标签是否添加对页面渲染的影响 在移动端，未添加该meta标签时，html元素的宽度一般为980px；添加该met">
+<meta name="keywords" content="css">
+<meta property="og:type" content="article">
+<meta property="og:title" content="几种css手机端适配布局">
+<meta property="og:url" content="http://yoursite.com/2018/04/17/几种css手机端适配布局/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="一、meta标签的效果 移动端页面一般会在head头部添加如下meta标签。  1&amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width, initial-scale=1.0&amp;quot;&amp;gt;  该meta标签是否添加对页面渲染的影响 在移动端，未添加该meta标签时，html元素的宽度一般为980px；添加该met">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/4989175-06475f56c9abc36d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/4989175-6b117069aad1d7a9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/4989175-bc68221ff80932ec.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/4989175-a327037ec790b076.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/4989175-6e9456edaa4717aa.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/4989175-12da3fae0d459a68.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp">
+<meta property="og:updated_time" content="2019-02-24T06:21:40.215Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="几种css手机端适配布局">
+<meta name="twitter:description" content="一、meta标签的效果 移动端页面一般会在head头部添加如下meta标签。  1&amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width, initial-scale=1.0&amp;quot;&amp;gt;  该meta标签是否添加对页面渲染的影响 在移动端，未添加该meta标签时，html元素的宽度一般为980px；添加该met">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/4989175-06475f56c9abc36d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-几种css手机端适配布局" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/04/17/几种css手机端适配布局/" class="article-date">
+  <time datetime="2018-04-17T13:44:20.000Z" itemprop="datePublished">2018-04-17</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      几种css手机端适配布局
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="一、meta标签的效果"><a href="#一、meta标签的效果" class="headerlink" title="一、meta标签的效果"></a>一、meta标签的效果</h2><ol>
+<li>移动端页面一般会在head头部添加如下meta标签。</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</span><br></pre></td></tr></table></figure>
+<ol>
+<li><p>该meta标签是否添加对页面渲染的影响<br> 在移动端，未添加该meta标签时，html元素的宽度一般为980px；添加该meta标签之后，html的宽度与设备物理尺寸宽度一致。</p>
+<a id="more"></a>
+<h2 id="二、几个名词和单位"><a href="#二、几个名词和单位" class="headerlink" title="二、几个名词和单位"></a>二、几个名词和单位</h2></li>
+<li><p>设备物理像素<br> 设备物理像素又被称为设备像素，是显示器设备上的一个最微小的物理部件。每个像素可以根据操作系统设置自己的颜色和亮度。<br> 设备物理像素的物理尺寸是固定的。在移动端浏览器中，设备物理像素的物理尺寸只与设备有关，不随手指的缩放而缩放。</p>
+</li>
+</ol>
+<ol start="2">
+<li><p>设备独立像素</p>
+<p> 设备独立像素也被称为密度无关像素，可以认为是计算机坐标系统中的一个点，这个点代表一个可以由程序使用并控制的</p>
+<p>虚拟像素</p>
+<p>(例如：CSS像素)，然后由相关系统转换为物理像素。</p>
+<p> 设备独立像素的物理尺寸是不固定的。在移动端浏览器中，设备独立像素的物理尺寸随着手指的缩放而缩放。</p>
+</li>
+</ol>
+<p>   <img src="https:////upload-images.jianshu.io/upload_images/4989175-06475f56c9abc36d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp" alt="img"></p>
+<p>   image.png</p>
+<ol start="3">
+<li><p>CSS像素<br> CSS像素是设备独立像素的一种，是一种<strong>抽象单位</strong>，主要作用在浏览器上。</p>
+</li>
+<li><p>设备像素比(dpr)<br> 设备像素比等于<strong>设备物理像素</strong>与<strong>设备独立像素</strong>(在浏览器中为CSS像素)的比值。可以通过window.devicePixelRatio获取移动设备的像素比。</p>
+</li>
+<li><p>分辨率(pt)<br> 表示设备屏幕在水平和垂直方向上的物理像素个数。例如，iPhone6的分辨率为750pt * 1334pt。</p>
+</li>
+<li><p>屏幕尺寸<br> 表示屏幕对角线的<strong>长度</strong>，单位为英寸(in)，1英寸等于2.54厘米。例如：iPhone6的屏幕尺寸为4.7英寸。</p>
+</li>
+<li><p>像素密度(ppi)<br> 指每英寸屏幕上诉拥有的物理像素数目。计算公式为：PPI = （横向像素2 +纵向像素2 ）1/2 /屏幕尺寸。例如：iPhone6的像素密度等于 （7502 +13342 ）1/2 /4.7 = 326。</p>
+</li>
+</ol>
+<h2 id="三、视口"><a href="#三、视口" class="headerlink" title="三、视口"></a>三、视口</h2><ol>
+<li>三个视口<br> 布局视口、视觉视口和理想视口。以下视口中所涉及的像素均为CSS像素，并且默认不考虑缩放。</li>
+<li>布局视口<br> 布局视口指<strong>网页布局区域</strong>。该视口取决于网页制作时的CSS样式，与用户设备无关。 布局视口宽度可以通过document.documentElement.clientWidth得到。<br> html根元素的包含块即是初始包含块，如果给html元素设置width: 100%; height:100%的CSS样式，则该页面的布局视口尺寸等于初始包含块的尺寸。</li>
+<li>视觉视口<br> 视觉视口指设备<strong>物理屏幕的可视区域</strong>。该视口与用户设备有关，在PC端浏览器和移动端浏览器上表现不同。<br> 在PC端浏览器中：视觉视口的宽度与浏览器可视窗口的宽度一致。<br> 在移动端浏览器中：①当无viewport对应的meta标签时，为了正常显示那些传统的为PC端浏览器设计的网页，移动设备浏览器一般都会通过一个小于零的默认初始缩放比例(initial-scale)将默认视觉视口宽度设置为980px或1020px，大于浏览器的宽度。②当设置viewport对应的meta标签且缩放比例为1.0时，视觉视口的宽度等于浏览器的宽度。③当用户手动缩小网页时，视觉视口变大；当手动放大网页时，视觉视口缩小。需要注意的是，用户手动缩放网页时，只影响<strong>视觉视口</strong>，布局视口保持不变。<br> 注释：布局视口是网页的CSS尺寸，视觉视口是用户在浏览器屏幕上可见的CSS尺寸。</li>
+<li>理想视口<br> 布局视口等于视觉视口时产生理想视口。<br> 理想视口中的网站拥有最理想的浏览和阅读的宽度，用户刚进入页面时不再需要缩放，并且没有横向滚动条。<br> 当添加以下meta标签时，就将当前理想视口的宽度设置为设备宽度，同时不允许用户手动缩放。</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot;&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="四、Retina屏幕与普通屏幕"><a href="#四、Retina屏幕与普通屏幕" class="headerlink" title="四、Retina屏幕与普通屏幕"></a>四、Retina屏幕与普通屏幕</h2><ol>
+<li><p>在上面讲了， 设备像素比(dpr)等于设备物理像素(分辨率)与设备独立像素(在浏览器中为CSS像素)的比值，可以通过window.devicePixelRatio获取移动设备的像素比。</p>
+</li>
+<li><p>在大部分PC设备以及早期的移动设备中，屏幕像素密度比较低，设备像素比(dpr)等于1，一个设备独立像素(CSS像素)对应一个物理像素。随着技术的发展，移动设备的像素密度越来越高，设备像素比(dpr)等于2或者3，一个设备独立像素(CSS像素)对应2或3个物理像素。</p>
+</li>
+<li><p>在不同屏幕上，不论是设备像素比(dpr)等于几，<strong>一个设备独立像素(CSS像素)</strong>所呈现的<strong>视觉大小是一致的</strong>。不同的只是他们<strong>对应(覆盖)的物理像素个数</strong>。</p>
+</li>
+<li><p>对于iPhone6设备的Retina屏幕而言，设备物理像素数(分辨率)为750pt <em> 1334pt，当缩放比例为1时，视觉视口为375px </em> 667px，设备像素比(dpr)为2，一个CSS像素对应4个物理像素。对于大部分PC端设备或早期移动设备等普通屏幕上，当缩放比例为1时，设备像素比(dpr)为1，一个CSS像素对应1个物理像素。他们的屏幕表现对比图如下：</p>
+</li>
+</ol>
+<p>   <img src="https:////upload-images.jianshu.io/upload_images/4989175-6b117069aad1d7a9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp" alt="img"></p>
+<p>   image.png</p>
+<h2 id="五、图像显示"><a href="#五、图像显示" class="headerlink" title="五、图像显示"></a>五、图像显示</h2><ol>
+<li><p>当一个<strong>设备独立像素(CSS像素)</strong>对应<strong>一个物理像素</strong>时，图片才能够完美清晰的显示。</p>
+</li>
+<li><p>当一个</p>
+<p>设备独立像素(CSS像素)</p>
+<p>对应</p>
+<p>多个物理像素</p>
+<p>时，由于设备独立像素(CSS)像素已经是最小的数据单位，不能被继续切割。为了能够显示出来，只能就近取色，从而导致图片</p>
+<p>模糊</p>
+<p>的问题。</p>
+</li>
+</ol>
+<p>   <img src="https:////upload-images.jianshu.io/upload_images/4989175-bc68221ff80932ec.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp" alt="img"></p>
+<p>   image.png</p>
+<ol start="3">
+<li><p>设备像素比(dpr)大于1时，一个设备独立像素(CSS像素)对应<strong>多个</strong>物理像素。此时需要提供与设备像素比(dpr)同倍数大小的图片，这样就能够解决图片模糊的问题。例如：对于dpr为2的Retina屏幕，一个200px <em> 300px的img标签，需要提供400 </em> 600的原型图片。</p>
+</li>
+<li><p>当一个</p>
+<p>物理像素</p>
+<p>对应</p>
+<p>多个设备独立像素(CSS像素)</p>
+<p>时，由于物理像素是显示器设备上可以设置自己颜色和亮度的最微小部件。为了能够显示出来，只能够通过一定的算法进行缩减显示，从而导致图片出现</p>
+<p>色差</p>
+<p>的问题。</p>
+</li>
+</ol>
+<p>   <img src="https:////upload-images.jianshu.io/upload_images/4989175-a327037ec790b076.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp" alt="img"></p>
+<p>   image.png</p>
+<ol start="5">
+<li>下面是一张100 <em> 100的图片分别放在100px </em> 100px、 50px <em> 50px、 25px </em> 25px的img容器中，在设备像素比(dpr)为2的屏幕中的显示效果。</li>
+</ol>
+<p>   <img src="https:////upload-images.jianshu.io/upload_images/4989175-6e9456edaa4717aa.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp" alt="img"></p>
+<p>   image.png</p>
+<pre><code>条形图，通过放大镜其实可以看出边界像素点取值的不同：
+
+①图1，就近取色，色值介于红白之间，偏淡，图片看上去会
+</code></pre><p>   模糊</p>
+<p>   (可以理解为图片拉伸)。</p>
+<pre><code>②图2，没有就近取色，色值要么是红，要么是白，图片看上去很
+</code></pre><p>   清晰</p>
+<p>   。</p>
+<pre><code>③图3，就近取色，色值介于红白之间，偏重，图片看上去有
+</code></pre><p>   色差</p>
+<p>   ，缺少锐利度(可以理解为图片挤压)。</p>
+<h2 id="六、1px边框问题"><a href="#六、1px边框问题" class="headerlink" title="六、1px边框问题"></a>六、1px边框问题</h2><ol>
+<li><p>如果页面中DOM元素的CSS样式设置边框宽度为1px。</p>
+<p> ① 对于设备像素比(dpr)为1的设备，</p>
+<p>1个设备独立像素(CSS像素)</p>
+<p>对应</p>
+<p>1个物理像素</p>
+<p>。则显示在浏览器屏幕上的边框占1个物理像素宽度。</p>
+<p> ② 对于设备像素比(dpr)为2的设备，</p>
+<p>1个设备独立像素(CSS像素)</p>
+<p>对应</p>
+<p>2个物理像素</p>
+<p>。则显示在浏览器屏幕上的边框占2个物理像素宽度。</p>
+<p> 显示效果对比图如下：</p>
+</li>
+</ol>
+<p>   <img src="https:////upload-images.jianshu.io/upload_images/4989175-12da3fae0d459a68.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp" alt="img"></p>
+<p>   image.png</p>
+<pre><code>对于一条1px宽的直线，它们在屏幕上的
+</code></pre><p>   物理尺寸(灰色区域)的确是相同</p>
+<p>   的，不同的其实是屏幕上最小的物理显示单元，即物理像素，所以对于一条直线，iphone5它能显示的最小宽度其实是图中的红线圈出来的灰色区域，用css来表示，理论上说是0.5px。然而并不是所有手机浏览器都能识别border: 0.5px;，ios7以下，android等其他系统里，0.5px会被当成为0px处理。</p>
+<ol start="2">
+<li><p>1px边框的实现方式<br> ① 0.5px边框<br> 优点：写法简单。<br> 缺点：无法兼容安卓设备、 iOS 8 以下设备。<br> ② 设置缩放比例 + rem布局<br> 优点：满足所有场景。<br> 缺点：影响范围大。<br> ③ 伪类 + transform缩放<br> 优点：满足所有场景<br> 缺点：对于已经使用伪类的元素，需要多层嵌套</p>
+</li>
+<li><p>设置缩放比例和rem实现1px边框</p>
+</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    (function()&#123;</span><br><span class="line">        var rem = window.innerWidth/10;</span><br><span class="line">        var fn=function()&#123;</span><br><span class="line">        var dpr = window.devicePixelRatio;</span><br><span class="line">        var scale = 1/dpr;</span><br><span class="line">        var html=document.getElementsByTagName(&apos;html&apos;)[0];</span><br><span class="line">        var meta = document.getElementById(&apos;vp&apos;);</span><br><span class="line">        html.style.fontSize=rem+&apos;px&apos;;</span><br><span class="line">        html.setAttribute(&apos;data-dpr&apos;,dpr);</span><br><span class="line">        meta.setAttribute(&apos;content&apos;,&apos;initial-scale=&apos;+scale+&apos;,minimum-scale=&apos;+scale+&apos;,maximum-scale=&apos;+scale+&apos;,user-scalable=no&apos;);</span><br><span class="line">        &#125;;</span><br><span class="line">        fn();</span><br><span class="line">        window.onresize=fn;</span><br><span class="line">    &#125;())</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p>对于任何移动设备：①一个rem对应innerWidth的1/10像素，10rem占满屏幕宽度。②页面缩放比例为1/dpr。设备独立像素(CSS像素)与设备物理像素一一对应。</p>
+<ol>
+<li>伪类和transform实现1px边框</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">//右边框 </span><br><span class="line">.bd-r&#123;</span><br><span class="line">    position: relative;</span><br><span class="line">&#125;</span><br><span class="line">.bd-r:after&#123;</span><br><span class="line">    height: 100%;</span><br><span class="line">    content: &apos;&apos;;</span><br><span class="line">    width: 1px;</span><br><span class="line">    border-right: 1px solid black;</span><br><span class="line">    position: absolute;</span><br><span class="line">    top: 0;</span><br><span class="line">    right: -1px;</span><br><span class="line">    transform: scaleX(.5);</span><br><span class="line">    -webkit-transform: scaleX(.5);</span><br><span class="line">    z-index: 10;</span><br><span class="line">&#125;</span><br><span class="line">//四个边框 </span><br><span class="line">.bd-1px&#123;</span><br><span class="line">    position: relative;</span><br><span class="line">    margin-bottom: 20px;</span><br><span class="line">    border:none;</span><br><span class="line">&#125;</span><br><span class="line">.bd-1px:after&#123;</span><br><span class="line">    content: &apos;&apos;;</span><br><span class="line">    position: absolute;</span><br><span class="line">    top: 0;</span><br><span class="line">    left: 0;</span><br><span class="line">    border: 1px solid #000;</span><br><span class="line">    -webkit-box-sizing: border-box;</span><br><span class="line">    box-sizing: border-box;</span><br><span class="line">    width: 200%;</span><br><span class="line">    height: 200%;</span><br><span class="line">    -webkit-transform: scale(0.5);</span><br><span class="line">    transform: scale(0.5);</span><br><span class="line">    -webkit-transform-origin: left top;</span><br><span class="line">    transform-origin: left top;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="七、移动端适配"><a href="#七、移动端适配" class="headerlink" title="七、移动端适配"></a>七、移动端适配</h2><ol>
+<li>Flex布局<br> 2009年，W3C提出了一种新的方案——Flex布局，可以简便、完整、响应式地实现各种页面布局。目前，它已经得到了所有浏览器的支持，成为未来布局的首选方案。<br> 参考: <a href="http://www.ruanyifeng.com/blog/2015/07/" target="_blank" rel="noopener">http://www.ruanyifeng.com/blog/2015/07/</a>…</li>
+<li>流式布局(百分比布局)<br> 百分比 = 目标元素宽度 / 父元素宽度</li>
+<li>媒体查询<br> 在不改变内容的情况下在样式中选择一种页面的布局以精确地适应不同的设备，从而改善用户体验。网页制作者针对不同的浏览器窗口尺寸来编写不同的样式，浏览器根据不同的窗口尺寸来选择使用不同的样式。<br> 格式：@media 设备类型 and (设备特性)｛样式代码｝<br> 举例: 如果屏幕宽度小于400像素(max-device-width: 400px)，则加载tinyScreen.css文件。</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; media=&quot;screen and (max-device-width: 400px)&quot; href=“tinyScreen.css” /&gt;</span><br></pre></td></tr></table></figure>
+<ol>
+<li>rem布局<br> px:像素; em:相对于父级元素字体大小的倍数;rem    :相对于HTML根元素(HTML)字体大小的倍数。</li>
+</ol>
+<h2 id="八、手淘团队的flexible-js布局"><a href="#八、手淘团队的flexible-js布局" class="headerlink" title="八、手淘团队的flexible.js布局"></a>八、手淘团队的flexible.js布局</h2><ol>
+<li>手淘团队推出了一套flexible布局方案。<br> 参考: <a href="http://www.w3cplus.com/mobile/lib-flexible-for-html5-layout.html" target="_blank" rel="noopener">http://www.w3cplus.com/mobile/lib-flexible-for-html5-layout.html</a> </li>
+<li>如果要适配iPhone6设备<br> ① 设计师给了一个750px宽度的设计稿（注意是750px而不是375px）。<br> ② 前端工程师用750px的这个比例还原。<br> ③ 把宽高是px的转换成rem。<br> ④ 字体使用px而不使用rem。<br> ⑤ flexible.js会自动判断dpr进行整个布局视口的放缩。</li>
+<li>布局单位(rem)与字体单位(px)<br> 在flexible.js中，布局尺寸宽高使用rem是为了保证在不同宽度尺寸的移动设备中能够<strong>保证布局的等比例缩放</strong>。字体大小尺寸使用px是为了保证font-size值不出现小数，且在不同宽度尺寸的移动设备中能够<strong>保证字体视觉大小一致</strong>。对于字体的适配，更好的做法是使用px单位和媒体查询来进行适配。</li>
+<li>flexible布局方案没有适配Android设备。Android设备的像素比(dpr)五花八门，从1到4，甚至可能出现小数。</li>
+</ol>
+<h2 id="九、响应式布局与自适应布局"><a href="#九、响应式布局与自适应布局" class="headerlink" title="九、响应式布局与自适应布局"></a>九、响应式布局与自适应布局</h2><ol>
+<li>响应式布局即是一个网页能够响应不同分辨率设备，在不同分辨率设备中可以<strong>展示特定版本的页面内容</strong>。自适应布局即是一个网页能够适应不同分辨率设备，在不同分辨率设备中可以<strong>大致等比例展示网页内容</strong>。</li>
+<li>现如今的大型网站，使用响应式布局的不多，更普遍的做法是针对PC和移动端分别做一套页面，用户打开页面时根据客户端类型进行重定向。原因在于，响应式布局在PC端会显示比较复杂的DOM结构，而在移动端通过DOM结构的隐藏进行简洁展示，代码较为冗余且在移动端消耗了太多的流量和加载速度。</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/04/17/几种css手机端适配布局/" data-id="cjsohyl3w000kh4qazrlsgfr4" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/05/30/Vuex的使用/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Vuex的使用
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/03/20/mongoose的基本使用/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Mongoose的基本使用</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node-js/">Node.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VUE/">VUE</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/微信小程序/">微信小程序</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Node-js/" style="font-size: 15px;">Node.js</a> <a href="/tags/VUE/" style="font-size: 20px;">VUE</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/微信小程序/" style="font-size: 10px;">微信小程序</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/10/11/微信小程序总结/">微信小程序基础总结</a>
+          </li>
+        
+          <li>
+            <a href="/2018/06/17/spa与mpa/">spa单页面与mpa多页面</a>
+          </li>
+        
+          <li>
+            <a href="/2018/06/17/nuxt.js介绍/">Nuxt.js入门</a>
+          </li>
+        
+          <li>
+            <a href="/2018/06/03/Vue的跨域知识/">VUE的跨域知识</a>
+          </li>
+        
+          <li>
+            <a href="/2018/05/31/VUE的watch computed/">VUE的watch computed</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

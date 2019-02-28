@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>Node.js的基本使用 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Node.js是目前非常火热的技术，但是它的诞生经历却很奇特。 众所周知，在Netscape设计出JavaScript后的短短几个月，JavaScript事实上已经是前端开发的唯一标准。 后来，微软通过IE击败了Netscape后一统桌面，结果几年时间，浏览器毫无进步。（2001年推出的古老的IE 6到今天仍然有人在使用！） 没有竞争就没有发展。微软认为IE6浏览器已经非常完善，几乎没有可改进之处">
+<meta name="keywords" content="Node.js">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Node.js的基本使用">
+<meta property="og:url" content="http://yoursite.com/2018/02/16/Node.js的基本使用/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Node.js是目前非常火热的技术，但是它的诞生经历却很奇特。 众所周知，在Netscape设计出JavaScript后的短短几个月，JavaScript事实上已经是前端开发的唯一标准。 后来，微软通过IE击败了Netscape后一统桌面，结果几年时间，浏览器毫无进步。（2001年推出的古老的IE 6到今天仍然有人在使用！） 没有竞争就没有发展。微软认为IE6浏览器已经非常完善，几乎没有可改进之处">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1890055-e91db51b43c79481?imageMogr2/auto-orient/strip%7CimageView2/2/w/514/format/webp">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1890055-f28b23c1f67ee8d6?imageMogr2/auto-orient/strip%7CimageView2/2/w/639/format/webp">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1890055-a7147b4c45585a7d?imageMogr2/auto-orient/strip%7CimageView2/2/w/501/format/webp">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1890055-763568d7f91c0d9b?imageMogr2/auto-orient/strip%7CimageView2/2/w/501/format/webp">
+<meta property="og:updated_time" content="2019-02-24T06:21:35.499Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Node.js的基本使用">
+<meta name="twitter:description" content="Node.js是目前非常火热的技术，但是它的诞生经历却很奇特。 众所周知，在Netscape设计出JavaScript后的短短几个月，JavaScript事实上已经是前端开发的唯一标准。 后来，微软通过IE击败了Netscape后一统桌面，结果几年时间，浏览器毫无进步。（2001年推出的古老的IE 6到今天仍然有人在使用！） 没有竞争就没有发展。微软认为IE6浏览器已经非常完善，几乎没有可改进之处">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/1890055-e91db51b43c79481?imageMogr2/auto-orient/strip%7CimageView2/2/w/514/format/webp">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Node.js的基本使用" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/02/16/Node.js的基本使用/" class="article-date">
+  <time datetime="2018-02-16T02:22:13.000Z" itemprop="datePublished">2018-02-16</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Node.js的基本使用
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Node.js是目前非常火热的技术，但是它的诞生经历却很奇特。</p>
+<p>众所周知，在Netscape设计出JavaScript后的短短几个月，JavaScript事实上已经是前端开发的唯一标准。</p>
+<p>后来，微软通过IE击败了Netscape后一统桌面，结果几年时间，浏览器毫无进步。（2001年推出的古老的IE 6到今天仍然有人在使用！）</p>
+<p>没有竞争就没有发展。微软认为IE6浏览器已经非常完善，几乎没有可改进之处，然后解散了IE6开发团队！而Google却认为支持现代Web应用的新一代浏览器才刚刚起步，尤其是浏览器负责运行JavaScript的引擎性能还可提升10倍。</p>
+<p>先是Mozilla借助已壮烈牺牲的Netscape遗产在2002年推出了Firefox浏览器，紧接着Apple于2003年在开源的KHTML浏览器的基础上推出了WebKit内核的Safari浏览器，不过仅限于Mac平台。</p>
+<p>随后，Google也开始创建自家的浏览器。他们也看中了WebKit内核，于是基于WebKit内核推出了Chrome浏览器。<br><a id="more"></a></p>
+<p>Chrome浏览器是跨Windows和Mac平台的，并且，Google认为要运行现代Web应用，浏览器必须有一个性能非常强劲的JavaScript引擎，于是Google自己开发了一个高性能JavaScript引擎，名字叫V8，以BSD许可证开源。</p>
+<p>现代浏览器大战让微软的IE浏览器远远地落后了，因为他们解散了最有经验、战斗力最强的浏览器团队！回过头再追赶却发现，支持HTML5的WebKit已经成为手机端的标准了，IE浏览器从此与主流移动端设备绝缘。</p>
+<p>浏览器大战和Node有何关系？</p>
+<p>话说有个叫Ryan Dahl的歪果仁，他的工作是用C/C++写高性能Web服务。对于高性能，异步IO、事件驱动是基本原则，但是用C/C++写就太痛苦了。于是这位仁兄开始设想用高级语言开发Web服务。他评估了很多种高级语言，发现很多语言虽然同时提供了同步IO和异步IO，但是开发人员一旦用了同步IO，他们就再也懒得写异步IO了，所以，最终，Ryan瞄向了JavaScript。</p>
+<p>因为JavaScript是单线程执行，根本不能进行同步IO操作，所以，JavaScript的这一“缺陷”导致了它只能使用异步IO。</p>
+<p>选定了开发语言，还要有运行时引擎。这位仁兄曾考虑过自己写一个，不过明智地放弃了，因为V8就是开源的JavaScript引擎。让Google投资去优化V8，咱只负责改造一下拿来用，还不用付钱，这个买卖很划算。</p>
+<p>于是在2009年，Ryan正式推出了基于JavaScript语言和V8引擎的开源Web服务器项目，命名为Node.js。虽然名字很土，但是，Node第一次把JavaScript带入到后端服务器开发，加上世界上已经有无数的JavaScript开发人员，所以Node一下子就火了起来。</p>
+<p>在Node上运行的JavaScript相比其他后端开发语言有何优势？</p>
+<p>最大的优势是借助JavaScript天生的事件驱动机制加V8高性能引擎，使编写高性能Web服务轻而易举。</p>
+<p>其次，JavaScript语言本身是完善的函数式语言，在前端开发时，开发人员往往写得比较随意，让人感觉JavaScript就是个“玩具语言”。但是，在Node环境下，通过模块化的JavaScript代码，加上函数式编程，并且无需考虑浏览器兼容性问题，直接使用最新的ECMAScript 6标准，可以完全满足工程上的需求。</p>
+<p>我还听说过io.js，这又是什么鬼？</p>
+<p>因为Node.js是开源项目，虽然由社区推动，但幕后一直由Joyent公司资助。由于一群开发者对Joyent公司的策略不满，于2014年从Node.js项目fork出了io.js项目，决定单独发展，但两者实际上是兼容的。</p>
+<p>然而中国有句古话，叫做“分久必合，合久必分”。分家后没多久，Joyent公司表示要和解，于是，io.js项目又决定回归Node.js。</p>
+<p>具体做法是将来io.js将首先添加新的特性，如果大家测试用得爽，就把新特性加入Node.js。io.js是“尝鲜版”，而Node.js是线上稳定版，相当于Fedora Linux和RHEL的关系。</p>
+<h2 id="安装Node-js和npm"><a href="#安装Node-js和npm" class="headerlink" title="安装Node.js和npm"></a>安装Node.js和npm</h2><p>由于Node.js平台是在后端运行JavaScript代码，所以，必须首先在本机安装Node环境。</p>
+<h3 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h3><p>目前Node.js的最新版本是6.2.x。首先，从<a href="https://link.jianshu.com?t=https://nodejs.org/" target="_blank" rel="noopener">Node.js官网</a>下载对应平台的安装程序，网速慢的童鞋请移步<a href="https://link.jianshu.com?t=http://pan.baidu.com/s/1kU5OCOB#path=/pub/nodejs" target="_blank" rel="noopener">国内镜像</a>。</p>
+<p>在Windows上安装时务必选择全部组件，包括勾选<code>Add to Path</code>。</p>
+<p>安装完成后，在Windows环境下，请打开命令提示符，然后输入<code>node -v</code>，如果安装正常，你应该看到v6.2.0这样的输出：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\IEUser&gt;node -vv6.2.0</span><br></pre></td></tr></table></figure>
+<p>继续在命令提示符输入<code>node</code>，此刻你将进入Node.js的交互环境。在交互环境下，你可以输入任意JavaScript语句，例如<code>100+200</code>，回车后将得到输出结果。</p>
+<p>要退出Node.js环境，连按两次<code>Ctrl+C</code>。</p>
+<p>在Mac或Linux环境下，请打开终端，然后输入<code>node -v</code>，你应该看到如下输出：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ node -vv6.2.0</span><br></pre></td></tr></table></figure>
+<p>如果版本号不是<code>v6.2.x</code>，说明Node.js版本不对，后面章节的代码不保证能正常运行，请重新安装最新版本。</p>
+<h3 id="npm"><a href="#npm" class="headerlink" title="npm"></a>npm</h3><p>在正式开始Node.js学习之前，我们先认识一下<code>npm</code>。</p>
+<p><code>npm</code>是什么东东？<code>npm</code>其实是Node.js的包管理工具（package manager）。</p>
+<p>为啥我们需要一个包管理工具呢？因为我们在Node.js上开发时，会用到很多别人写的JavaScript代码。如果我们要使用别人写的某个包，每次都根据名称搜索一下官方网站，下载代码，解压，再使用，非常繁琐。于是一个集中管理的工具应运而生：大家都把自己开发的模块打包后放到npm官网上，如果要使用，直接通过npm安装就可以直接用，不用管代码存在哪，应该从哪下载。</p>
+<p>更重要的是，如果我们要使用模块A，而模块A又依赖于模块B，模块B又依赖于模块X和模块Y，npm可以根据依赖关系，把所有依赖的包都下载下来并管理起来。否则，靠我们自己手动管理，肯定既麻烦又容易出错。</p>
+<p>讲了这么多，<code>npm</code>究竟在哪？</p>
+<p>其实<code>npm</code>已经在Node.js安装的时候顺带装好了。我们在命令提示符或者终端输入<code>npm -v</code>，应该看到类似的输出：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\&gt;npm -v3.8.9</span><br></pre></td></tr></table></figure>
+<p>如果直接输入<code>npm</code>，你会看到类似下面的输出：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\&gt; npmUsage: npm &lt;command&gt;where &lt;command&gt; is one of: ...</span><br></pre></td></tr></table></figure>
+<p>上面的一大堆文字告诉你，<code>npm</code>需要跟上命令。现在我们不用关心这些命令，后面会一一讲到。目前，你只需要确保<code>npm</code>正确安装了，能运行就行。</p>
+<h2 id="第一个Node程序"><a href="#第一个Node程序" class="headerlink" title="第一个Node程序"></a>第一个Node程序</h2><p>在前面的所有章节中，我们编写的JavaScript代码都是在浏览器中运行的，因此，我们可以直接在浏览器中敲代码，然后直接运行。</p>
+<p>从本章开始，我们编写的JavaScript代码将<em>不能</em>在浏览器环境中执行了，而是在Node环境中执行，因此，JavaScript代码将直接在你的计算机上以命令行的方式运行，所以，我们要先选择一个文本编辑器来编写JavaScript代码，并且把它保存到本地硬盘的某个目录，才能够执行。</p>
+<p>那么问题来了：文本编辑器到底哪家强？</p>
+<p>推荐两款文本编辑器：</p>
+<p>一个是<a href="https://link.jianshu.com?t=http://www.sublimetext.com/" target="_blank" rel="noopener">Sublime Text</a>，免费使用，但是不付费会弹出提示框：</p>
+<p><img src="https:////upload-images.jianshu.io/upload_images/1890055-e91db51b43c79481?imageMogr2/auto-orient/strip%7CimageView2/2/w/514/format/webp" alt="img"></p>
+<p>hello.js</p>
+<p>一个是<a href="https://link.jianshu.com?t=http://notepad-plus-plus.org/" target="_blank" rel="noopener">Notepad++</a>，免费使用，有中文界面：</p>
+<p><img src="https:////upload-images.jianshu.io/upload_images/1890055-f28b23c1f67ee8d6?imageMogr2/auto-orient/strip%7CimageView2/2/w/639/format/webp" alt="img"></p>
+<p>notepad-hello.js</p>
+<p>请注意，用哪个都行，但是绝对不能用Word和写字板，Windows自带的记事本也强烈不推荐使用。Word和写字板保存的不是纯文本文件，而记事本会自作聪明地在文件开始的地方加上几个特殊字符（UTF-8 BOM），结果经常会导致程序运行出现莫名其妙的错误。</p>
+<p>安装好文本编辑器后，输入以下代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&apos;use strict&apos;;</span><br><span class="line">console.log(&apos;Hello, world.&apos;);</span><br></pre></td></tr></table></figure>
+<p>第一行总是写上<code>&#39;use strict&#39;;</code></p>
+<p>是因为我们总是以严格模式运行JavaScript代码，避免各种潜在陷阱。然后，选择一个目录，例如<code>C:\Workspace</code>，把文件保存为<code>hello.js</code>，就可以打开命令行窗口，把当前目录切换到<code>hello.js</code>所在目录，然后输入以下命令运行这个程序了：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">C:\Workspace&gt;node hello.js</span><br><span class="line">Hello, world.</span><br></pre></td></tr></table></figure>
+<p>也可以保存为别的名字，比如<code>first.js</code>，但是必须要以<code>.js</code>结尾。此外，文件名只能是英文字母、数字和下划线的组合。</p>
+<p>如果当前目录下没有<code>hello.js</code>这个文件，运行<code>node hello.js</code>就会报错：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\Workspace&gt;node hello.jsmodule.js:338 throw err; ^Error: Cannot find module &apos;C:\Workspace\hello.js&apos; at Function.Module._resolveFilename at Function.Module._load at Function.Module.runMain at startup at node.js</span><br></pre></td></tr></table></figure>
+<p>报错的意思就是，没有找到<code>hello.js</code>这个文件，因为文件不存在。这个时候，就要检查一下当前目录下是否有这个文件了。</p>
+<h3 id="命令行模式和Node交互模式"><a href="#命令行模式和Node交互模式" class="headerlink" title="命令行模式和Node交互模式"></a>命令行模式和Node交互模式</h3><p>请注意区分命令行模式和Node交互模式。看到类似<code>C:\&gt;</code>是在Windows提供的命令行模式：</p>
+<p><img src="https:////upload-images.jianshu.io/upload_images/1890055-a7147b4c45585a7d?imageMogr2/auto-orient/strip%7CimageView2/2/w/501/format/webp" alt="img"></p>
+<p>run-node-hello</p>
+<p>在命令行模式下，可以执行node进入Node交互式环境，也可以执行node <code>hello.js</code>运行一个<code>.js</code>文件。看到<code>&gt;</code>是在Node交互式环境下：</p>
+<p><img src="https:////upload-images.jianshu.io/upload_images/1890055-763568d7f91c0d9b?imageMogr2/auto-orient/strip%7CimageView2/2/w/501/format/webp" alt="img"></p>
+<p>node-interactive-env</p>
+<p>在Node交互式环境下，我们可以输入JavaScript代码并立刻执行。此外，在命令行模式运行<code>.js</code>文件和在Node交互式环境下直接运行JavaScript代码有所不同。Node交互式环境会把每一行JavaScript代码的结果自动打印出来，但是，直接运行JavaScript文件却不会。</p>
+<p>例如，在Node交互式环境下，输入：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; 100 + 200 + 300;</span><br><span class="line">600</span><br></pre></td></tr></table></figure>
+<p>直接可以看到结果600。</p>
+<p>但是，写一个<code>calc.js</code>的文件，内容如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">100 + 200 + 300;</span><br></pre></td></tr></table></figure>
+<p>然后在命令行模式下执行：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\Workspace&gt;node calc.js</span><br></pre></td></tr></table></figure>
+<p>发现什么输出都没有。这是正常的。想要输出结果，必须自己用<code>console.log()</code>打印出来。把<code>calc.js</code>改造一下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">console.log(100 + 200 + 300);</span><br></pre></td></tr></table></figure>
+<p>再执行，就可以看到结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">C:\Workspace&gt;node calc.js</span><br><span class="line">600</span><br></pre></td></tr></table></figure>
+<p>用文本编辑器写JavaScript程序，然后保存为后缀为<code>.js</code>的文件，就可以用node直接运行这个程序了。</p>
+<p>Node的交互模式和直接运行<code>.js</code>文件有什么区别呢？</p>
+<p>直接输入<code>node</code>进入交互模式，相当于启动了Node解释器，但是等待你一行一行地输入源代码，每输入一行就执行一行。</p>
+<p>直接运行<code>node hello.js</code>文件相当于启动了Node解释器，然后一次性把<code>hello.js</code>文件的源代码给执行了，你是没有机会以交互的方式输入源代码的。</p>
+<p>在编写JavaScript代码的时候，完全可以一边在文本编辑器里写代码，一边开一个Node交互式命令窗口，在写代码的过程中，把部分代码粘到命令行去验证，事半功倍！前提是得有个27’的超大显示器！</p>
+<h2 id="模块"><a href="#模块" class="headerlink" title="模块"></a>模块</h2><p>在计算机程序的开发过程中，随着程序代码越写越多，在一个文件里代码就会越来越长，越来越不容易维护。</p>
+<p>为了编写可维护的代码，我们把很多函数分组，分别放到不同的文件里，这样，每个文件包含的代码就相对较少，很多编程语言都采用这种组织代码的方式。在Node环境中，一个<code>.js</code>文件就称之为一个模块（module）。</p>
+<p>使用模块有什么好处？</p>
+<p>最大的好处是大大提高了代码的可维护性。其次，编写代码不必从零开始。当一个模块编写完毕，就可以被其他地方引用。我们在编写程序的时候，也经常引用其他模块，包括Node内置的模块和来自第三方的模块。</p>
+<p>使用模块还可以避免函数名和变量名冲突。相同名字的函数和变量完全可以分别存在不同的模块中，因此，我们自己在编写模块时，不必考虑名字会与其他模块冲突。</p>
+<p>在上一节，我们编写了一个<code>hello.js</code>文件，这个<code>hello.js</code>文件就是一个模块，模块的名字就是文件名（去掉<code>.js</code>后缀），所以<code>hello.js</code>文件就是名为<code>hello</code>的模块。</p>
+<p>我们把<code>hello.js</code>改造一下，创建一个函数，这样我们就可以在其他地方调用这个函数：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&apos;use strict&apos;;</span><br><span class="line"></span><br><span class="line">var s = &apos;Hello&apos;;</span><br><span class="line">function greet(name) &#123; </span><br><span class="line">  console.log(s + &apos;, &apos; + name + &apos;!&apos;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">module.exports = greet;</span><br></pre></td></tr></table></figure>
+<p>函数<code>greet()</code>是我们在<code>hello</code>模块中定义的，你可能注意到最后一行是一个奇怪的赋值语句，它的意思是，把函数<code>greet</code>作为模块的输出暴露出去，这样其他模块就可以使用<code>greet</code>函数了。</p>
+<p>问题是其他模块怎么使用<code>hello</code>模块的这个<code>greet</code>函数呢？我们再编写一个<code>main.js</code>文件，调用<code>hello</code>模块的<code>greet</code>函数：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&apos;use strict&apos;;</span><br><span class="line">// 引入hello模块:</span><br><span class="line">var greet = require(&apos;./hello&apos;);</span><br><span class="line">var s = &apos;Michael&apos;;</span><br><span class="line">greet(s); // Hello, Michael!</span><br></pre></td></tr></table></figure>
+<p>注意到引入<code>hello</code>模块用Node提供的<code>require</code>函数：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var greet = require(&apos;./hello&apos;);</span><br></pre></td></tr></table></figure>
+<p>引入的模块作为变量保存在<code>greet</code>变量中，那<code>greet</code>变量到底是什么东西？其实变量<code>greet</code>就是在<code>hello.js</code>中我们用<code>module.exports = greet;</code>输出的<code>greet</code>函数。所以，<code>main.js</code>就成功地引用了<code>hello.js</code>模块中定义的<code>greet()</code>函数，接下来就可以直接使用它了。</p>
+<p>在使用<code>require()</code>引入模块的时候，请注意模块的相对路径。因为<code>main.js</code><br>和<code>hello.js</code>位于同一个目录，所以我们用了当前目录.：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var greet = require(&apos;./hello&apos;); // 不要忘了写相对目录!</span><br></pre></td></tr></table></figure>
+<p>如果只写模块名：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var greet = require(&apos;hello&apos;);</span><br></pre></td></tr></table></figure>
+<p>则Node会依次在内置模块、全局模块和当前模块下查找<code>hello.js</code>，你很可能会得到一个错误：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">module.js throw err; ^Error: Cannot find module &apos;hello&apos; at </span><br><span class="line">Function.Module._resolveFilename at Function.Module._load ... at </span><br><span class="line">Function.Module._load at Function.Module.runMain</span><br></pre></td></tr></table></figure>
+<p>遇到这个错误，你要检查：</p>
+<ul>
+<li>模块名是否写对了</li>
+<li>模块文件是否存在</li>
+<li>相对路径是否写对了</li>
+</ul>
+<h3 id="CommonJS规范"><a href="#CommonJS规范" class="headerlink" title="CommonJS规范"></a>CommonJS规范</h3><p>这种模块加载机制被称为CommonJS规范。在这个规范下，每个<code>.js</code>文件都是一个模块，它们内部各自使用的变量名和函数名都互不冲突，例如，<code>hello.js</code><br>和<code>main.js</code>都申明了全局变量<code>var s = &#39;xxx&#39;</code>，但互不影响。</p>
+<p>一个模块想要对外暴露变量（函数也是变量），可以用<code>module.exports = variable;</code>，一个模块要引用其他模块暴露的变量，用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var ref = require(&apos;module_name&apos;);</span><br></pre></td></tr></table></figure>
+<p>就拿到了引用模块的变量。</p>
+<p>要在模块中对外输出变量，用：<code>module.exports = variable;</code></p>
+<p>输出的变量可以是任意对象、函数、数组等等。要引入其他模块输出的对象，用：<code>var foo = require(&#39;other_module&#39;);</code></p>
+<p>引入的对象具体是什么，取决于引入模块输出的对象。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/02/16/Node.js的基本使用/" data-id="cjsohyl3s000hh4qasi1nt6cq" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node-js/">Node.js</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/03/20/mongoose的基本使用/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Mongoose的基本使用
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node-js/">Node.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VUE/">VUE</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/微信小程序/">微信小程序</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Node-js/" style="font-size: 15px;">Node.js</a> <a href="/tags/VUE/" style="font-size: 20px;">VUE</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/微信小程序/" style="font-size: 10px;">微信小程序</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/10/11/微信小程序总结/">微信小程序基础总结</a>
+          </li>
+        
+          <li>
+            <a href="/2018/06/17/spa与mpa/">spa单页面与mpa多页面</a>
+          </li>
+        
+          <li>
+            <a href="/2018/06/17/nuxt.js介绍/">Nuxt.js入门</a>
+          </li>
+        
+          <li>
+            <a href="/2018/06/03/Vue的跨域知识/">VUE的跨域知识</a>
+          </li>
+        
+          <li>
+            <a href="/2018/05/31/VUE的watch computed/">VUE的watch computed</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

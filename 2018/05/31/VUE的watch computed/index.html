@@ -5,15 +5,22 @@
   
 
   
-  <title>Archives: 2018 | Hexo</title>
+  <title>VUE的watch computed | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/2018/index.html">
+  <meta name="description" content="watch  computed  使用及理解概念 watch  使用理解  v-model  绑定input   input   一个对象来理解 (val) 就是当前的v-model 的value 值     动态监听 数据变化执行事件 computed  绑定input 这个变量   input 变动  才执行绑定的这个函数 然后 return 才能返回值  这个函数 对应的的 值就是retur">
+<meta name="keywords" content="VUE">
+<meta property="og:type" content="article">
+<meta property="og:title" content="VUE的watch computed">
+<meta property="og:url" content="http://yoursite.com/2018/05/31/VUE的watch computed/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="watch  computed  使用及理解概念 watch  使用理解  v-model  绑定input   input   一个对象来理解 (val) 就是当前的v-model 的value 值     动态监听 数据变化执行事件 computed  绑定input 这个变量   input 变动  才执行绑定的这个函数 然后 return 才能返回值  这个函数 对应的的 值就是retur">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/11867359-891126e5826b98a4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/370/format/webp">
+<meta property="og:updated_time" content="2019-02-24T06:21:45.551Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="VUE的watch computed">
+<meta name="twitter:description" content="watch  computed  使用及理解概念 watch  使用理解  v-model  绑定input   input   一个对象来理解 (val) 就是当前的v-model 的value 值     动态监听 数据变化执行事件 computed  绑定input 这个变量   input 变动  才执行绑定的这个函数 然后 return 才能返回值  这个函数 对应的的 值就是retur">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/11867359-891126e5826b98a4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/370/format/webp">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -60,192 +67,71 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/10/11/微信小程序总结/" class="archive-article-date">
-  <time datetime="2018-10-11T14:04:10.000Z" itemprop="datePublished">Oct 11</time>
+        <section id="main"><article id="post-VUE的watch computed" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/05/31/VUE的watch computed/" class="article-date">
+  <time datetime="2018-05-31T12:44:20.000Z" itemprop="datePublished">2018-05-31</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/10/11/微信小程序总结/">微信小程序基础总结</a>
+    <h1 class="article-title" itemprop="name">
+      VUE的watch computed
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/06/17/spa与mpa/" class="archive-article-date">
-  <time datetime="2018-06-17T12:04:10.000Z" itemprop="datePublished">Jun 17</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/06/17/spa与mpa/">spa单页面与mpa多页面</a>
-    </h1>
-  
+        <h1 id="watch-computed-使用及理解概念"><a href="#watch-computed-使用及理解概念" class="headerlink" title="watch  computed  使用及理解概念"></a>watch  computed  使用及理解概念</h1><p><img src="https:////upload-images.jianshu.io/upload_images/11867359-891126e5826b98a4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/370/format/webp" alt="img"></p>
+<p>watch  使用理解</p>
+<p> v-model  绑定input   input   一个对象来理解</p>
+<p>(val) 就是当前的v-model 的value 值     动态监听 数据变化执行事件</p>
+<p>computed  绑定input 这个变量   input 变动  才执行绑定的这个函数</p>
+<p>然后 return 才能返回值  这个函数 对应的的 值就是return 返回的值</p>
+<p>函数就相当 key</p>
+<p>相当与绑定 某个值  监听变化</p>
+<p>input 动态监听  还有原生的方法  @input=””</p>
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/06/17/nuxt.js介绍/" class="archive-article-date">
-  <time datetime="2018-06-17T12:04:10.000Z" itemprop="datePublished">Jun 17</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/06/17/nuxt.js介绍/">Nuxt.js入门</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/06/03/Vue的跨域知识/" class="archive-article-date">
-  <time datetime="2018-06-03T00:14:10.000Z" itemprop="datePublished">Jun 3</time>
-</a>
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/05/31/VUE的watch computed/" data-id="cjsohyl2e0000h4qajoztyidy" class="article-share-link">Share</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/06/03/Vue的跨域知识/">VUE的跨域知识</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/05/31/VUE的watch computed/" class="archive-article-date">
-  <time datetime="2018-05-31T12:44:20.000Z" itemprop="datePublished">May 31</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/05/31/VUE的watch computed/">VUE的watch computed</a>
-    </h1>
-  
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VUE/">VUE</a></li></ul>
 
-    </header>
+    </footer>
   </div>
-</article>
   
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/05/30/Vuex的使用/" class="archive-article-date">
-  <time datetime="2018-05-30T13:14:20.000Z" itemprop="datePublished">May 30</time>
-</a>
-      
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/05/30/Vuex的使用/">Vuex的使用</a>
-    </h1>
+    <a href="/2018/06/03/Vue的跨域知识/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          VUE的跨域知识
+        
+      </div>
+    </a>
   
+  
+    <a href="/2018/05/30/Vuex的使用/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Vuex的使用</div>
+    </a>
+  
+</nav>
 
-    </header>
-  </div>
+  
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/04/17/几种css手机端适配布局/" class="archive-article-date">
-  <time datetime="2018-04-17T13:44:20.000Z" itemprop="datePublished">Apr 17</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/04/17/几种css手机端适配布局/">几种css手机端适配布局</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/03/20/mongoose的基本使用/" class="archive-article-date">
-  <time datetime="2018-03-20T13:03:17.000Z" itemprop="datePublished">Mar 20</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/03/20/mongoose的基本使用/">Mongoose的基本使用</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/02/16/Node.js的基本使用/" class="archive-article-date">
-  <time datetime="2018-02-16T02:22:13.000Z" itemprop="datePublished">Feb 16</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/02/16/Node.js的基本使用/">Node.js的基本使用</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
 
 </section>
         
